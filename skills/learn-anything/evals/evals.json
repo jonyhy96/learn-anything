@@ -1,0 +1,48 @@
+{
+  "skill_name": "learn-anything",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "eval-1-linear-algebra",
+      "prompt": "I really want to finally understand linear algebra — I'm an adult who half-remembers matrices from school and I want the intuition, not just formulas. Can you help me actually learn it?",
+      "expected_output": "Drafts a structured ordered course outline, then scaffolds the minimal-track single-page learning app with all four pillars.",
+      "files": [],
+      "assertions": [
+        "Produces a runnable single-page web app (React/Vite), not a one-off script or static HTML page",
+        "Includes a structured course path with per-lesson progress/unlock that persists across reloads",
+        "Includes a context-aware AI tutor that is primed per lesson",
+        "Implements the select-to-ask annotation interaction (highlight a span -> ask -> inline persisted thread)",
+        "The generated app builds and its unit tests pass"
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "eval-2-french-revolution",
+      "prompt": "Build me an interactive study app for the French Revolution where I can highlight any part of an explanation and ask a follow-up question about just that bit.",
+      "expected_output": "Recognizes the select-to-ask learning-system shape; builds the full system from templates with the highlight interaction front and center.",
+      "files": [],
+      "assertions": [
+        "Produces a runnable single-page web app (React/Vite), not a one-off script or static HTML page",
+        "Implements the explicitly-requested select-to-ask interaction (highlight -> floating ask -> inline thread) using the reusable component",
+        "Includes a structured course path with progress/unlock that persists across reloads",
+        "Includes a context-aware AI tutor that is primed per lesson",
+        "The generated app builds and its unit tests pass"
+      ]
+    },
+    {
+      "id": 3,
+      "eval_name": "eval-3-home-cooking",
+      "prompt": "I'm teaching myself home cooking from zero. I want something that gives me a real path to follow, an AI that teaches each step and remembers where I am, and that I can come back to without losing progress.",
+      "expected_output": "Defaults to minimal track; ordered cook-first course, context-aware tutor, persistence, select-to-ask; resources real and marked, not fabricated.",
+      "files": [],
+      "assertions": [
+        "Produces a runnable single-page web app (React/Vite), not a one-off script or static HTML page",
+        "Includes a structured course path with progress/unlock that persists across reloads",
+        "Includes a context-aware AI tutor that is primed per lesson",
+        "Implements the select-to-ask annotation interaction (highlight -> ask -> inline persisted thread)",
+        "Recommended resources are real and clearly marked as suggestions to verify, with no fabricated precise URLs",
+        "The generated app builds and its unit tests pass"
+      ]
+    }
+  ]
+}

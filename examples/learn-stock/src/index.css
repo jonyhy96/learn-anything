@@ -1,0 +1,127 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --line: #e5e7eb;
+  --highlight: #fde68a;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.la-app { display: flex; min-height: 100vh; }
+.la-sidebar {
+  width: 300px;
+  border-right: 1px solid var(--line);
+  padding: 1.5rem;
+  flex-shrink: 0;
+}
+.la-sidebar h1 { font-size: 1.2rem; margin: 0 0 0.5rem; }
+.la-desc { color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+.la-lessons { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.la-lesson {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+.la-lesson:disabled { opacity: 0.45; cursor: not-allowed; }
+.la-lesson.la-current { border-color: var(--accent); }
+.la-lesson.la-completed { background: #f0fdf4; }
+.la-lesson-status { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; }
+
+.la-main { flex: 1; padding: 2rem 2.5rem; max-width: 760px; }
+.la-summary { color: var(--muted); }
+.la-complete, .la-ask-button, .la-panel button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.la-complete {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+}
+
+/* select-to-ask interaction */
+.la-message { position: relative; }
+.la-prose { line-height: 1.7; }
+.la-prose pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.la-prose code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.la-highlight { background: var(--highlight); border-radius: 2px; cursor: pointer; }
+.la-badge {
+  font-size: 0.6rem;
+  color: var(--accent);
+  margin-left: 1px;
+  cursor: pointer;
+}
+.la-ask-button {
+  padding: 0.35rem 0.7rem;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+}
+
+.la-panel {
+  margin: 0.75rem 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  background: #fafafa;
+}
+.la-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.la-panel-quote { font-style: italic; color: var(--muted); font-size: 0.85rem; }
+.la-panel-actions button {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.la-followup { margin: 0.5rem 0; }
+.la-followup-q { font-weight: 600; font-size: 0.9rem; }
+.la-followup-a { color: #374151; font-size: 0.9rem; white-space: pre-wrap; }
+.la-panel-input { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.la-panel-input textarea {
+  flex: 1;
+  resize: vertical;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+.la-panel-input button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 0 1rem;
+}
+.la-typing { color: var(--muted); }
